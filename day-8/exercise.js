@@ -1,22 +1,29 @@
-//Create a JSON object representing a person with properties like name, age, and address. Add methods to the object to calculate the person's birth year and full address.
+//1
 
-{
-    "name": "John Doe",
-    "age": 30,
-    "address": {
-      "street": "123 Main St",
-      "city": "Exampletown",
-      "state": "ABC",
-      "zipcode": "12345"
-    },
-    "getBirthYear": function() {
-      var currentYear = new Date().getFullYear();
-      return currentYear - this.age;
-    },
-    "getFullAddress": function() {
-      return this.address.street + ", " + this.address.city + ", " + this.address.state + " " + this.address.zipcode;
-    }
+var person = {
+  "name": "John Doe",
+  "age": 30,
+  "address": {
+    "street": "123 Main St",
+    "city": "Exampletown",
+    "state": "ABC",
+    "zipcode": "12345"
+  },
+  "getBirthYear": function() {
+    var currentYear = new Date().getFullYear();
+    return currentYear - this.age;
+  },
+  "getFullAddress": function() {
+    return this.address.street + ", " + this.address.city + ", " + this.address.state + " " + this.address.zipcode;
   }
+};
+
+console.log(person.name); // Output: John Doe
+console.log(person.age); // Output: 30
+console.log(person.address); // Output: { "street": "123 Main St", "city": "Exampletown", "state": "ABC", "zipcode": "12345" }
+
+console.log(person.getBirthYear()); // Output: 1992
+console.log(person.getFullAddress()); // Output: 123 Main St, Exampletown, ABC 12345
 
   //2.
   function mergeJSONObjects(obj1, obj2) {
